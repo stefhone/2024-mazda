@@ -1,0 +1,574 @@
+/* CSS VARIABLES */
+:root {
+	--color-bg-white: #fff;
+	--color-bg-black: #000;
+	--color-bg-grey: #1d2224;
+	--color-bg-light-grey: #f0f0f0;
+	--color-bg-dark-grey: #2a2a2a;
+	--color-font-white: #fff;
+	--color-font-black: #000;
+	--color-font-grey: #101010;
+	--color-btn-white: #fff;
+	--color-btn-grey: #101010;
+	--color-btn-red: #910a2d;
+	--color-links-red: #910a2d;
+	--color-focus-links-red: #910a2d;
+	--font-weight-heading: 500;
+	--transition: 0.4s all;
+}
+
+@font-face {
+	font-family: 'MazdaType-Regular';
+	src: url('assets/fonts/MazdaType-Regular.woff2') format('woff2'), url('assets/fonts/MazdaType-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'MazdaType-Bold';
+	src: url('assets/fonts/MazdaType-Bold.woff2') format('woff2'), url('assets/fonts/MazdaType-Bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+	scroll-behavior: smooth;
+	font-size: 15px;
+}
+
+body {
+	font-family: MazdaType-Regular, Helvetica, Arial, sans-serif;
+	color: var(--color-font-grey);
+	background-color: var(--color-bg-white);
+}
+
+h1 {
+	font-family: MazdaType-Bold, Helvetica, Arial, sans-serif;
+	font-size: 3rem;
+	font-weight: var(--font-weight-heading);
+	line-height: 1.177;
+	letter-spacing: 0.373333333333333rem;
+	color: var(--color-font-white);
+	padding: 1.866666666666667rem 0;
+	margin: 0;
+}
+
+h2 {
+	font-size: 1.6rem;
+	font-weight: var(--font-weight-heading);
+	color: var(--color-font-grey);
+	margin: 0 0 0.25rem 0;
+	line-height: 1.333;
+	letter-spacing: 0.2rem;
+}
+
+@media screen and (min-width: 50em) {
+	h2 {
+		font-size: 1.875rem;
+	}
+}
+
+a,
+a:hover,
+a:focus {
+	color: var(--color-links-red);
+	text-decoration: underline;
+}
+
+a:focus {
+	color: var(--color-focus-links-red);
+}
+
+.align-center {
+	text-align: center;
+}
+
+/* FLEX */
+.flex-container {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.want-content-block.flex-container,
+.why-content-block.flex-container,
+.extra-content-block.flex-container {
+	flex-direction: column;
+}
+
+@media (min-width: 61.25em) {
+	.want-content-block.flex-container,
+	.why-content-block.flex-container,
+	.extra-content-block.flex-container {
+		flex-direction: row-reverse;
+	}
+}
+
+.flex-item {
+	display: flex;
+}
+
+.flex-row-main {
+	flex-direction: row;
+}
+
+.want-content-block .flex-item,
+.why-content-block .flex-item,
+.extra-content-block .flex-item {
+	flex: 0 0 100%;
+}
+
+@media (min-width: 61.25em) {
+	.want-content-block .flex-item,
+	.why-content-block .flex-item,
+	.extra-content-block .flex-item {
+		flex: 1;
+	}
+}
+
+/* HEADER */
+header {
+	background: var(--color-bg-grey);
+	width: 100%;
+}
+
+header .flex-container {
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.166666666666667rem 0;
+}
+
+.logo-mazda {
+	max-width: 3.266666666666667rem;
+	max-height: 3rem;
+}
+
+.logo-logoipsum {
+	max-width: 7.933333333333333rem;
+	max-height: 2rem;
+}
+
+@media (min-width: 48em) {
+	header .flex-container {
+		padding: 1.8rem 0;
+	}
+
+	.logo-mazda {
+		max-width: 4.8rem;
+		max-height: 4.4rem;
+	}
+
+	.logo-logoipsum {
+		max-width: 9.2rem;
+		max-height: 2.333333333333333rem;
+	}
+}
+
+/* SPECIAL OFFER */
+.special-offer {
+	padding: 1.5rem 2rem;
+}
+
+@media screen and (min-width: 50em) {
+	.special-offer {
+		padding: 2rem 4rem 1.5rem 4rem;
+	}
+}
+
+.special-offer h2 {
+	color: var(--color-font-white);
+}
+
+.button-cta,
+form .primaryAction {
+	background: var(--color-btn-white);
+	border: 2px solid var(--color-btn-grey);
+	color: var(--color-btn-grey);
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1.0625rem;
+	line-height: 1.615384615384615;
+	height: 3rem;
+	padding: 0.5rem 1.25rem;
+	text-decoration: none;
+	vertical-align: top;
+	white-space: nowrap;
+	position: relative;
+	border-radius: 0.333333333333333rem;
+	margin-bottom: 1em;
+	text-transform: uppercase;
+	-webkit-transition: var(--transition);
+	-moz-transition: var(--transition);
+	transition: var(--transition);
+}
+
+.button-cta:focus,
+.button-cta:hover,
+form .primaryAction:hover,
+form .primaryAction:focus {
+	background: var(--color-btn-red);
+	border: 2px solid var(--color-btn-red);
+	color: var(--color-font-white);
+	text-decoration: none;
+}
+
+.button-cta:focus,
+form .primaryAction:focus {
+	background: var(--color-focus-links-red);
+	border: 2px solid var(--color-focus-links-red);
+}
+
+/* BACKGROUND CONTAINERS */
+.constraint {
+	max-width: 68.266666666666667rem;
+	width: 92%;
+}
+
+.white-bg {
+	background: var(--color-bg-white);
+	padding: 2rem 0 3rem 0;
+}
+
+.white-bg h2 {
+	padding-bottom: 0.25rem;
+}
+
+.white-bg p {
+	margin: 0 0 1rem 0;
+}
+
+.black-bg {
+	background: var(--color-bg-black);
+	color: var(--color-font-white);
+}
+
+.grey-bg {
+	background: var(--color-bg-light-grey);
+	padding: 3rem 0;
+}
+
+/* SECTION CONTAINERS */
+.want-content-block,
+.why-content-block,
+.form-content-block {
+	margin-bottom: 3rem;
+}
+
+.grey-bg .flex-container {
+	background: var(--color-bg-white);
+	color: var(--color-font-black);
+}
+
+div[class*='-content-block'] .content-text-container {
+	padding: 1.875rem;
+}
+
+/* .mazda-banner {
+	height: auto;
+	max-width: 100%;
+} */
+
+.want-content-block .flex-item:first-child {
+	flex-basis: 30%;
+}
+
+.want-content-block .flex-item:last-child {
+	background: var(--color-bg-dark-grey);
+	color: var(--color-font-white);
+	width: 100%;
+}
+
+.why-content-block .flex-item:first-child {
+	background: var(--color-bg-dark-grey);
+	color: var(--color-font-white);
+	width: 100%;
+	order: 1;
+}
+
+.why-content-block .flex-item:last-child {
+	width: 100%;
+	order: 0;
+}
+
+.content-text-container li p {
+	margin: 0.5rem 0;
+}
+
+.extra-content-block.flex-container {
+	gap: 2rem;
+	background: var(--color-bg-light-grey);
+}
+
+.extra-content-block .flex-item {
+	background: var(--color-bg-white);
+	width: 100%;
+}
+
+@media screen and (min-width: 61.25em) {
+	.want-content-block .flex-item:first-child,
+	.why-content-block .flex-item:last-child {
+		flex-basis: 55%;
+	}
+
+	.want-content-block .flex-item:last-child,
+	.why-content-block .flex-item:first-child {
+		flex-basis: 45%;
+	}
+
+	.why-content-block .flex-item:first-child {
+		order: 0;
+	}
+}
+
+/* VIDEO */
+.media-container {
+	overflow: hidden;
+	max-width: 37.5rem;
+	height: auto;
+	margin: 0 auto;
+	background-color: var(--color-bg-white);
+}
+
+.youtube-player {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+	background: var(--color-bg-black);
+	margin: 0.333333333333333rem;
+}
+
+.youtube-player iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	background: transparent;
+}
+
+.youtube-player img {
+	object-fit: cover;
+	display: block;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+	max-width: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	border: none;
+	cursor: pointer;
+	-webkit-transition: var(--transition);
+	-moz-transition: var(--transition);
+	transition: var(--transition);
+}
+
+.youtube-player img:hover {
+	-webkit-filter: brightness(75%);
+	filter: brightness(75%);
+}
+
+.youtube-player .play {
+	height: 5.133333333333333rem;
+	width: 5.133333333333333rem;
+	left: 50%;
+	top: 50%;
+	margin-left: -2.2rem;
+	margin-top: -2.266666666666667rem;
+	position: absolute;
+	background: url('assets/images/icon-play-btn.svg') no-repeat;
+	cursor: pointer;
+}
+
+/* FORM */
+.form-content-block.constraint {
+	width: 100%;
+}
+
+.form-container {
+	width: auto;
+	margin: 2rem auto 0 auto;
+}
+
+.form-body {
+	background-color: var(--color-bg-white);
+	padding: 1.875rem 2rem 3rem;
+}
+
+form .oneField {
+	border-width: 0;
+}
+
+form .preField {
+	color: #333;
+}
+
+form .primaryAction {
+	display: block;
+	width: 100%;
+	margin-top: 1.5rem;
+	font-family: MazdaType-Regular, Helvetica, Arial, sans-serif;
+	background-color: var(--color-btn-grey);
+	color: var(--color-btn-white);
+}
+
+form .oneField label.reqMark::after {
+	content: '*';
+	display: inline-block;
+	color: #999;
+}
+
+form input[type='text'],
+form textarea,
+form input[type='tel'],
+form input[type='email'] {
+	display: block;
+	width: 100%;
+	-webkit-appearance: none;
+	appearance: none;
+	font-family: MazdaType-Regular, Helvetica, Arial, sans-serif;
+	font-size: 0.875rem;
+	line-height: 1;
+	border-radius: 0;
+	background: var(--color-bg-white);
+	border-width: 0;
+	border-bottom: 1px solid #dedede;
+	border-image: initial;
+	padding: 0.8125rem;
+}
+
+.form-input {
+	padding: 0.4rem 0;
+}
+
+form input[type='text']:focus,
+form input[type='tel']:focus,
+form input[type='email']:focus {
+	outline: none;
+}
+
+.grid {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	flex-flow: row wrap;
+	gap: 0 2rem;
+	justify-content: space-between;
+}
+
+.grid__item,
+.grid__item-2,
+.grid__item-3 {
+	width: 100%;
+	display: block;
+	margin-bottom: 1.5rem;
+}
+
+.grid__item-2 {
+	padding-left: 0;
+}
+
+.confirmation {
+	display: none;
+}
+
+@media only screen and (min-width: 61.25em) {
+	.form-body {
+		background-color: var(--color-bg-white);
+		padding: 1.875rem 0 3rem;
+	}
+
+	.grid__item-2 {
+		padding-left: 1.5rem;
+	}
+
+	.w-1-2-large-up,
+	.w-2-4-large-up,
+	.w-3-6-large-up,
+	.w-6-12-large-up {
+		width: 48%;
+	}
+}
+
+/* FOOTER */
+footer {
+	background-color: var(--color-bg-grey);
+	position: relative;
+	z-index: 1;
+	color: var(--color-font-white);
+}
+
+.footer-content {
+	padding: 3rem;
+}
+
+footer p {
+	margin: 0;
+	padding: 1rem 0 0 0;
+	font-size: 0.9rem;
+	line-height: 1.6;
+}
+
+.footer-link {
+	color: var(--color-font-white);
+	text-decoration: none;
+}
+
+.footer-link:hover,
+.footer-link:active {
+	color: var(--color-white);
+	text-decoration: underline;
+}
+
+.topbtn {
+	display: none;
+	background-color: var(--color-btn-white);
+	width: 30px;
+	text-align: center;
+	padding: 0.25em;
+	position: fixed;
+	bottom: 0;
+	right: 30px;
+	-webkit-transition: var(--transition);
+	-moz-transition: var(--transition);
+	transition: var(--transition);
+	z-index: 1000;
+}
+
+a.topbtn {
+	text-decoration: none;
+}
+
+.topbtn:hover {
+	cursor: pointer;
+	background-color: var(--color-bg-light-grey);
+}
+
+.topbtn:active {
+	background-color: #aaa;
+}
+
+body.scrolled .topbtn {
+	display: block;
+}
