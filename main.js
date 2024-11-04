@@ -15,13 +15,14 @@ window.onscroll = function () {
 	}
 }
 
-/* YouTube video playr optimisation */
+/* YouTube video player optimisation */
 function youtubeIframe(div) {
 	var iframe = document.createElement('iframe')
 	iframe.setAttribute('src', 'https://www.youtube.com/embed/' + div.dataset.id + '?autoplay=1&rel=0')
 	iframe.setAttribute('frameborder', '0')
 	iframe.setAttribute('allowfullscreen', '1')
 	iframe.setAttribute('allow', 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture')
+	iframe.setAttribute('title', 'YouTube video player')
 	div.parentNode.replaceChild(iframe, div)
 }
 

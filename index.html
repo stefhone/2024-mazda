@@ -3,7 +3,10 @@
 		<!-- Meta -->
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="description" content="Explore Mazda with the best offers and testimonials. Get in touch with us today." />
+		<meta
+			name="description"
+			content="Explore Mazda and Your Product from Company Name with best in class features, testimonials. Take the next step and get in touch with us today."
+		/>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="robots" content="noindex" />
 		<!-- Title -->
@@ -237,66 +240,49 @@
 							<div class="form-container">
 								<form id="simpleForm" class="hintsBelow labelsLeftAligned" role="form">
 									<div class="grid">
-										<div class="oneField field-container-D grid__item w-1-2-large-up">
-											<label class="label preField reqMark" for="firstName">First Name</label>
-											<input
-												type="text"
-												id="firstName"
-												name="firstName"
-												required
-												title="First Name"
-												class="required"
-											/>
+										<div class="grid__item w-1-2-large-up">
+											<label class="reqMark" for="firstName">First Name</label>
+											<input type="text" id="firstName" name="firstName" required title="First Name" />
 										</div>
 
-										<div class="oneField field-container-D grid__item w-1-2-large-up">
-											<label class="label preField reqMark" for="lastName">Last Name</label>
+										<div class="grid__item w-1-2-large-up">
+											<label class="reqMark" for="lastName">Last Name</label>
 											<input
 												type="text"
 												id="lastName"
 												name="lastName"
 												required
 												title="Last Name"
-												class="required"
 												aria-required="true"
 											/>
 										</div>
 
-										<div class="oneField field-container-D grid__item w-1-2-large-up">
-											<label class="label preField reqMark" for="phone">Phone</label>
-											<input
-												type="tel"
-												id="phone"
-												name="phone"
-												required
-												title="Phone"
-												class="required"
-												aria-required="true"
-											/>
+										<div class="grid__item w-1-2-large-up">
+											<label class="reqMark" for="phone">Phone</label>
+											<input type="tel" id="phone" name="phone" required title="Phone" aria-required="true" />
 										</div>
 
-										<div class="oneField field-container-D grid__item w-1-2-large-up">
-											<label class="label preField reqMark" for="email">Email</label>
+										<div class="grid__item w-1-2-large-up">
+											<label class="reqMark" for="email">Email</label>
 											<input
 												type="email"
 												id="email"
 												name="email"
 												required
 												title="Email"
-												class="validate-email required"
+												class="validate-email"
 												aria-required="true"
 											/>
 										</div>
 
-										<div class="oneField field-container-D grid__item w-1-1-large-up">
-											<label class="label preField reqMark" for="dealership">Dealership</label>
+										<div class="grid__item w-1-1-large-up">
+											<label class="reqMark" for="dealership">Dealership</label>
 											<input
 												type="text"
 												id="dealership"
 												name="dealership"
 												required
 												title="Dealership"
-												class="required"
 												aria-required="true"
 											/>
 										</div>
@@ -308,8 +294,9 @@
 										</button>
 									</div>
 
-									<!-- Confirmation Message -->
-									<div class="confirmation" id="confirmationMessage">Thank you! Your form has been submitted.</div>
+									<div class="confirmation" id="confirmationMessage" aria-live="polite">
+										Thank you! Your form has been submitted.
+									</div>
 								</form>
 							</div>
 						</div>
@@ -340,7 +327,7 @@
 			<div class="constraint">
 				<div class="footer-content align-center" role="contentinfo">
 					<a href="#" aria-label="Visit Logoipsum website">
-						<img class="logo-logoipsum" src="assets/images/logo-logoipsum.svg" alt="Logoipsum logo" />
+						<img src="assets/images/logo-logoipsum.svg" loading="lazy" class="logo-logoipsum" alt="Logoipsum logo" />
 					</a>
 					<p>
 						Company Name, 123 ABC Street, London, LA12 1AB. <br />01234 567890 <br /><a
@@ -356,10 +343,7 @@
 		</footer>
 
 		<a href="#top" title="Back to top" class="topbtn">&uarr;</a>
-		<!-- jQuery library -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-		<!-- Your custom JavaScript file -->
 		<script src="main.js"></script>
 	</body>
 </html>

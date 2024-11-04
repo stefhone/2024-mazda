@@ -278,11 +278,6 @@ div[class*='-content-block'] .content-text-container {
 	padding: 1.875rem;
 }
 
-/* .mazda-banner {
-	height: auto;
-	max-width: 100%;
-} */
-
 .want-content-block .flex-item:first-child {
 	flex-basis: 30%;
 }
@@ -413,11 +408,7 @@ div[class*='-content-block'] .content-text-container {
 	padding: 1.875rem 2rem 3rem;
 }
 
-form .oneField {
-	border-width: 0;
-}
-
-form .preField {
+form label {
 	color: #333;
 }
 
@@ -430,7 +421,7 @@ form .primaryAction {
 	color: var(--color-btn-white);
 }
 
-form .oneField label.reqMark::after {
+form label.reqMark::after {
 	content: '*';
 	display: inline-block;
 	color: #999;
